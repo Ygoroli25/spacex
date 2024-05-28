@@ -6,6 +6,10 @@ header {
   padding: 10px;
 }
 
+header img {
+  height: 50px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
