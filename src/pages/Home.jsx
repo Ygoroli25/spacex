@@ -80,7 +80,7 @@ const Home = () => {
           </nav>
         </div>
       </header>
-      <main className="cadastro-bg">
+      <main>
         <section id="cadastro" className="cadastro conteiner">
           <div className="cadastro-conteudo">
             <h1 className="font-1-xxl cor-0">

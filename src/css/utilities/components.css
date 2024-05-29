@@ -20,8 +20,40 @@
   background: linear-gradient(var(--cor-p2), var(--cor-p3));
 }
 
+.btn-delite {
+  display: inline-block;
+  background-color: transparent;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-0);
+  text-transform: uppercase;
+  color: var(--cor-1);
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+}
+
+.btn-delite:hover {
+  background: linear-gradient(red, darkred);
+}
+
+.btn-flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+@media (max-width: 950px){
+  .btn-flex{
+    gap: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   .btn{
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .btn-delite{
     padding: 12px 16px;
     font-size: 1rem;
   }
