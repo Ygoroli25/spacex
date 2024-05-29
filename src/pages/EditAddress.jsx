@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
+
 
 const EditAddress = () => {
   const [nome, setNome] = useState('');
@@ -68,16 +68,18 @@ const EditAddress = () => {
   return (
     <div>
       <header>
-        <img src="caminho-para-a-logo-da-empresa" alt="Logo da Empresa" />
+        <div className='header conteiner'>
+      <img src="https://jgd625.github.io/SpaceXAPI/images/Xlogo.png" alt="Logo da Empresa" />
         <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
-          <ul>
-            <li><Link to="/">Cadastro de Entrega</Link></li>
-            <li><Link to="/edicao">Edição de Endereço</Link></li>
+          <ul className='nav-link'>
+            <li><Link to="/">Cadastro</Link></li>
+            <li><Link to="/edicao">Entregas</Link></li>
           </ul>
           <button className="hamburger" onClick={toggleMenu}>
             &#9776;
           </button>
         </nav>
+        </div>
       </header>
 
       <section id="edicao">

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
+
 
 const Home = () => {
   const [destino, setDestino] = useState('terra');
@@ -10,7 +10,8 @@ const Home = () => {
   const [endereco, setEndereco] = useState('');
   const [observacoes, setObservacoes] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false); // Para evitar múltiplos submits
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -52,17 +53,23 @@ const Home = () => {
     setEndereco('');
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div>
       <header>
-        <img src="caminho-para-a-logo-da-empresa" alt="Logo da Empresa" />
-        <nav className="navbar">
-          <ul>
-            <li><Link to="/">Cadastro de Entrega</Link></li>
-            <li><Link to="/edicao">Edição de Endereço</Link></li>
+        <div className='header conteiner'>
+        <img src="https://jgd625.github.io/SpaceXAPI/images/Xlogo.png" alt="Logo da Empresa" />
+        <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
+          <ul className='nav-link'>
+            <li><Link to="/">Cadastro</Link></li>
+            <li><Link to="/edicao">Entregas</Link></li>
           </ul>
-          <button className="hamburger">&#9776;</button>
+          <button className="hamburger" onClick={toggleMenu}>&#9776;</button>
         </nav>
+        </div>
       </header>
 
       <section id="cadastro">
