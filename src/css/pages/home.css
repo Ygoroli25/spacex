@@ -1,0 +1,76 @@
+.cadastro {
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+}
+
+.cadastro img {
+  justify-self: flex-end;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cadastro-conteudo {
+  padding-bottom: 100px;
+}
+
+.cadastro h1 {
+  margin-top: 60px;
+  margin-bottom: 32px;
+}
+
+.form-container {
+  background: var(--cor-12);
+  color: var(--cor-0);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea {
+  width: calc(100% - 2rem);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container select {
+  width: 50%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .cadastro {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+  .cadastro h1{
+    margin-top: 0px;
+  }
+
+  .cadastro img {
+    display: none;
+  }
+
+  .cadastro-conteudo {
+    padding-bottom: 0px;
+  }
+  .cadastro h1 {
+    margin-bottom: 1rem;
+  }
+
+  .form-container label {
+    font-size: 0.875rem;
+  }
+}

@@ -82,8 +82,8 @@ const EditAddress = () => {
         </div>
       </header>
 
-      <section id="edicao">
-        <h2>Edição de Endereço</h2>
+      <section id="edicao" className='edicao conteiner'>
+        <h1 className='font-1-xxl cor-0'>Edição de Endereço<span className='cor-p1'>.</span></h1>
         <div>
           <label htmlFor="searchNome">Nome do Destinatário:</label>
           <input 
@@ -173,6 +173,7 @@ const EditAddress = () => {
             <button type="button" onClick={handleDelete}>Excluir</button>
           </form>
         )}
+        <img src="https://images.pexels.com/photos/7170714/pexels-photo-7170714.jpeg" alt="Astronauta" />
       </section>
     </div>
   );
